@@ -58,7 +58,7 @@ const Dealer = () => {
 
 // My version:
 
-// let curr_url2 = "https://palashpol71-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai"  //**Before
+// let curr_url2 = "https://albertocarb1-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai"  //**Before
   
   let params = useParams();
   let id =params.id;
@@ -90,12 +90,13 @@ const Dealer = () => {
   }
 
   const get_reviews = async ()=>{
+    console.log("Testing Reviews")
     const res = await fetch(reviews_url, {
       method: "GET"
     });
     const retobj = await res.json();
 
-    console.log("Fetching object called reviews", retobj) //*******debugging
+    console.log("Fetching object called reviews", retobj) //********debugging
     
     if(res.status === 200) {
         console.log("Yes review st 200")

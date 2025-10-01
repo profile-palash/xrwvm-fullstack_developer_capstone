@@ -11,12 +11,12 @@ const Dealers = () => {
   let [states, setStates] = useState([])
 
  
-  const dealer_url ="https://palashpol71-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/fetchDealers";
-//   const dealer_url = "https://palashpol71-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/fetchDealers";
+  const dealer_url ="https://albertocarb1-3030.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/fetchDealers";
+//   const dealer_url = "https://albertocarb1-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/fetchDealers";
                   
   
-  const dealer_url_by_state = "https://palashpol71-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/fetchDealers";
-//   const dealer_url_by_state =  "https://palashpol71-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/fetchDealers";
+  const dealer_url_by_state = "https://albertocarb1-3030.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/fetchDealers";
+//   const dealer_url_by_state =  "https://albertocarb1-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/fetchDealers";
  
   const filterDealers = async (state) => {
     console.log('mycalling');  //************ my test - debugging- Vrifying if "filterDealers" is being invoked by "Onchange" functiion.
