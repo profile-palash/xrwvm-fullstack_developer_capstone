@@ -6,6 +6,7 @@ import Header from '../Header/Header';
 
 
 const PostReview = () => {
+    console.log("Calling Post component") //*******************************Debugging
   const [dealer, setDealer] = useState({});
   const [review, setReview] = useState("");
   const [model, setModel] = useState();
@@ -15,11 +16,15 @@ const PostReview = () => {
 
   let curr_url = window.location.href;
   let root_url = curr_url.substring(0,curr_url.indexOf("postreview"));
+  console.log("Root", root_url) //*******************************Debugging
   let params = useParams();
   let id =params.id;
-  let dealer_url = root_url+`djangoapp/dealer/${id}`;
-  let review_url = root_url+`djangoapp/add_review`;
-  let carmodels_url = root_url+`djangoapp/get_cars`;
+  let dealer_url = root_url+`dealer/${id}`; //Currenly URL + end - point fetching data from views.py and restapi.py in djangoproject folder
+  let review_url = root_url+`add_review`; //Currenly URL + end - point fetching data from views.py and restapi.py in djangoproject folder
+  let carmodels_url = root_url+`get_cars`; //Currenly URL + end - point populating and fetching data from views.py and restapi.py in djangoproject folder
+
+
+
 
   const postreview = async ()=>{
     let name = sessionStorage.getItem("firstname")+" "+sessionStorage.getItem("lastname");
@@ -48,6 +53,7 @@ const PostReview = () => {
     });
 
     console.log(jsoninput);
+    console.log("My /add_review URL", review_url)
     const res = await fetch(review_url, {
       method: "POST",
       headers: {
@@ -57,7 +63,7 @@ const PostReview = () => {
   });
 
   const json = await res.json();
-  if (json.status === 200) {
+  if (json.status === 200) {   
       window.location.href = window.location.origin+"/dealer/"+id;
   }
 

@@ -130,9 +130,11 @@ def get_dealer_reviews(request, dealer_id):
         return JsonResponse({"status":400,"message":"Bad Request"})
 
 def add_review(request):
+    print("myViews")
     if(request.user.is_anonymous == False):
         data = json.loads(request.body)
         try:
+            print("myViews try")
             response = post_review(data)
             return JsonResponse({"status":200})
         except:
